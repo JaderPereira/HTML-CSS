@@ -1,0 +1,31 @@
+tags sobre fonte
+    vou anotar as tags sobre fonte pq tem coisa pra porra e eu n quero esquecer e ter q voltar no video do gustavo guanabara
+    detalhe importante que quando voce for colocar uma fonte que tenha mais de uma palavra voce deve colocar ela entre aspas simples ou duplas, exemplo:
+        correto: font-family: "Times New Roman";
+        errado: font-family: Times New Roman;
+
+font-family: ; 
+    define a fonte que voce quer, voce pode colocar um conjunto de fontes dentro do font-family caso alguma fonte de problema, por exemplo, se a minha televisão nao tem suporte para fonte arial ela nao vai rodar a font arial, mas como eu criei um font family com arial e sans-serif e por conhecidencia minha televisao suporta sans-serif vai dar tudo certo, e sao fontes que se parecem entao cria menos problema.
+
+font-size: ;
+    muda o tamanho da fonte, tem anotação so sobre tipos de medidas pra essas paradas.
+
+font-weight: ;
+    define a grossura da letra, weight é peso entao quanto mais peso mais grossa a letra é, e quanto mais magra mais fina ela é, para o font-weight podemos usar o "lighter" que é algo mais fininho, o "normal" que é normal, o "bold" que é negrito e o "bolder" que é um mega negrito. alem dessas formas com nomes nos tambem temos uma representação por numero que vai de 100 ate 900, existem algumas fontes que mudam de 100 em 100 e outras que são mais especificas, por exemplo, tem uma font que ela no 100 fica fininha(lighter), no 300 ela fica normal(normal), no 600 ela fica em negrito(bold) e em 900 ela fica em um mega negrito(bolder)
+
+font-style: ;
+    define atribuições importante para a fonte, por exemplo, se eu quero meu texto em italico eu coloco "font-style: italic;" e o texto que eu quero mudar vai estar em italico. existem outros tipos de funcionalidades, o italico nao é a unica do font-style
+
+text-decoration: ;
+    tem uma funcionalidade parecida com o font-style serve pra dar uma alterada no texto. por exemplo, se eu quero meu texto sublinhado eu coloco "text-decoration: underlined;" e meu texto ira ficar sublinhado
+
+shorthand(maozinha)
+
+    O shorthand é uma ajuda do css, todos os codigos que vimos a cima(menos o text-decoration) pode ser encurtados em apenas uma linha, caso eu quisesse utilizar todas as propriedades a cima(menos o text-decoration) eu teria que ocupar uma linha pra cada, mas com o "font" eu poupo esse trabalho e deixo ele mais facil, o font tem uma ordem a seguir, a ordem é
+    font-style -> font-weight -> font-size -> font-family
+
+    exemplo:
+        font: italic bolder 20px Arial, sans-serif;
+        (italic = font-style, bolder = font-weight, 20px = font-size, Arial e sans-serif = font-family)
+
+    alem dessa praticidade toda o "font:" tambem pode conter alguns elemenentos, por exemplo, "font: italic 40px arial" neste exemplo eu nao coloquei o font-weight mas mesmo assim o texto sera alterado, a unica observação importante é que o font so vai funcionar se ele tiver o font-family e o font-size, sem um desses dois nao funciona, mas tirar o font-style ou o font-weight nao tem problema. 

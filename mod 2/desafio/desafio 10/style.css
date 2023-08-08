@@ -1,0 +1,196 @@
+
+@charset "UTF-8";
+@font-face {
+    font-family: 'idroid';
+    src: url('fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --cor0: #6cf5a9;
+    --cor1: #5dd179;
+    --cor2: #73eb75;
+    --cor3: #81d466;
+
+    --fonte-padrao: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --fonte-destaque: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --fonte-android: 'idroid', cursive;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+    background-color: #2cf687;
+}
+
+header {
+    background-image: linear-gradient(var(--cor1), #1e4527 ) ;
+    font-family: var(--fonte-destaque);
+    padding: 10px 0 0 0;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 0px 6px black;
+    min-height: 150px;
+}
+header > h1{
+   padding: 10px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.204);
+}
+header > p {
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.2em;
+    max-width: 500px;
+    margin: auto;
+    padding: 0 10px 20px 10px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.204);
+}
+nav {
+    text-align: start;
+    padding: 10px;
+       
+}
+nav > a {
+    text-decoration: none;
+    color: rgb(255, 254, 254);
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.386);
+    border-top: 0;
+    border-bottom: 0;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+nav > a:hover {
+    background-color: var(--cor1);
+    text-decoration: underline;
+}
+#home {
+    border-left: 0;
+}
+#not {
+    border-left: 0;
+
+}
+#curi {
+    border-left: 0;
+}
+#fale {
+    border-left: 0;
+    border-right: 0;
+}
+
+main {
+    background-color: white;
+    max-width: 800px;
+    min-width: 320px;
+    font-family: var(--fonte-padrao);
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.792);
+    margin-bottom: 30px;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+}
+main p {
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em;
+    
+}
+main strong {
+    color: #1d3d1d;
+    font-weight: bold;
+    padding: 3px 4px;
+}
+.links {
+    color: #1d3d1d;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--cor0);
+    padding: 3px 4px;
+}
+.links::after {
+    content: '\00A0\1F517';
+}
+.links:hover{
+    text-decoration: underline; 
+}
+main > article > h1 {
+    margin-top: px;
+    font-family: var(--fonte-android);
+    color: #1d3d1d;
+    padding: 10px 0 0 0px;
+    text-indent: 20px;
+}
+
+main > article > section > article > h3 {
+    font-family: var(--fonte-android);
+    background-image: linear-gradient(to right,#96f4c087, transparent);
+    color: #1d3d1d;
+    padding: 10px 0 10px 0px;
+    text-indent: 20px;
+    margin: 15px 0;
+    
+}
+
+main > article > section > article img {
+    width: 100%;
+}
+#android {
+    max-width: 350px; 
+    display: block;
+    margin: auto;
+    /*
+    esta configuração de transformar a imagem em um bloco com o display: block serve para que o margin: auto funcione sem problemas. ate porque por padrao uma imagem nao é um bloco
+    */
+}
+.video {
+    margin: 20px -20px;
+    background-color: #1d3d1d;
+    padding: 20px;
+    padding-bottom: 58%;
+    position: relative;
+}
+.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    height: 90%;
+    width: 90%; 
+}
+
+aside{
+    background-color: #b3f4b3;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.286);
+    padding: 15px;
+}
+#barra {
+    background-color: #398a3a;
+    border-radius: 10px 10px 0 0;
+    padding: 5px;
+    text-indent: 10px;
+    color: white;
+    margin: -15px;
+}
+section#listas {
+    columns: 2;
+}
+#r {
+    margin-top: 15px;
+}
+
+
+
+footer {
+    background-color: #1e4527;
+    padding: 5px;
+    text-align: center;
+}
+
+

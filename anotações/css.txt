@@ -1,0 +1,71 @@
+o css contem diversos elementos, por isso irei anotar todos que eu aprendi aqui. 
+
+em objetos
+
+    para definir a fonte                           use: font: normal 18pt arial;
+    para mudar a altura de um objeto               use: height: 10px;
+    para mudar a largura de um objeto              use: width: 10px;
+    para mudar a altura do texto de um objeto      use: line-height: 10px; (se vc colocar a msm quantidade de pixels q a altura o texto fica no meio)
+    para colocar o texto no centro                 use: text-align: center;
+    para mover uma quantidade de pixels pra baixo  use: margin-top: 10px;
+
+no site inteiro(body)
+
+    para mudar a cor de fundo do site              use: background: blue; (a cor é a sua escolha, "blue" foi apenas um exemplo)
+    para definir a cor das letras                  use: color: white;
+    para definir a fonte                           use: font: normal 18pt arial;
+
+combinações legais
+    
+    margin: auto                //vai deixar no meio centrado mesmo se voce mudar o tamanho da janela
+
+definições detalhadas
+    box-shadow:;
+        no css podemos fazer sombras em bordas usando o box-shadow: px px px color
+        os parametros do box-shadow funcionam da seguinte maneira, depois de box-shadow voce deve colocar a quantidade de pixels que a borda vai pra direita, no segundo parametro voce da um espaço entre o primeiro e o segundo e coloca a quantidade de pixels que a borda vai ter para baixo, em seguida no terceiro voce da um espaço entre o segundo e o terceiro parametro e coloca a quantidade de pixels para o espalhamento dessa borda e por fim voce deve colocar a cor do a sombra, como padrao era ira vir na cor preta. esta explicação tambem serve para o text-shadow
+
+shorthand(maozinha)
+    o shorthand vai me ajudar a deixar meu codigo mais limpo, os shorthand's pegam algumas linhas de codigo e juntam em uma so, todos que eu aprender irei anotar aqui.
+
+    font: ;
+         o shorthand font vai me ajudar com algumas configurações de fontes, o font tem uma ordem a seguir, a ordem é
+        font-style -> font-weight -> font-size -> font-family
+
+        exemplo:
+        font: italic bolder 20px Arial, sans-serif;
+        (italic = font-style, bolder = font-weight, 20px = font-size, Arial e sans-serif = font-family)
+
+        alem dessa praticidade toda o "font:" tambem pode conter alguns elemenentos, por exemplo, "font: italic 40px arial" neste exemplo eu nao coloquei o font-weight mas mesmo assim o texto sera alterado, a unica observação importante é que o font so vai funcionar se ele tiver o font-family e o font-size, sem um desses dois nao funciona, mas tirar o font-style ou o font-weight nao tem problema. 
+
+    border: ;
+        o border vai me ajudar a fazer uma borda em apenas uma linha, a ordem a seguir do border é:
+        border-size -> border-style -> border-color
+
+        exemplo: border: 6px solid blue;
+        6px = border-size, solid = border-style, blue = border-color
+
+seletores personalizados
+
+    #   =   id
+    .   =   class
+    :   =   pseudo-classe
+    ::  =   pseudo-elemento
+    >   =   children
+
+border
+    border-width: ;
+        vai definir a grossura da sua borda (bota em px)
+    
+    border-color: ; 
+        vai definir a cor da sua borda
+
+    border-style: ; 
+        vai definir o tipo da sua borda
+            alguns tipos:
+            solid   =  ela fica normal
+            dashed  =  deixa pontilhado quadrad
+            dotted  =  deixa pontilhado redondo
+            double  =  faz duas linhas
+            groove  =  uma borda meio 3d
+            (se surgir duvida vai testar vagabundo)
+            

@@ -1,0 +1,85 @@
+Listas
+
+    Listas ordenadas
+
+        As listas ordenadas sao representadas pela tag <ol> </ol> dentro de <ol> voce deve colocar os itens de suas listas, como por exemplo:
+
+        <h1> conteudos de logica de programação</h1>
+        <ol>
+            <li>operadores                          //primeiro item da listas   
+            <li>operadores relacionais              //segundo item da lista
+            <li>desvios condicionais                //e por ai vai
+            <li>laços de repetição
+            <li>funções
+        </ol>
+
+        ao abrir o site teremos um titulo de nivel 1 e a lista numerada com os itens, nos tambem podemos mudar o tipo de ordenação da lista, normalmente a lista vem numerada, mas tambem podemos mudar isso, seja pra numeros romanos ou pra letras, para mudarmos isso devemos colocar o atrbuto 'type=""' e em seguida o tipo de ordenação. os tipos de ordenação são:
+
+        type="1"            //ordenação numerada
+        type="A"            //ordenação alfabetica em maiusculo
+        type="a"            //ordenação alfabetica em minusculo
+        type="I"            //ordenação romana em maiusculo
+        type="i"            //ordenação romana em minusculo
+
+        tambem podemos alterar quando a lista ira começar, por exemplo, eu criei uma lista e quero que ela começe no numero 10, para isso usamos o atributo:
+
+        start="10"        //o "10" pode ser alterado pera qualquer numero.
+
+
+    Listas não ordenas
+
+        as listas nao ordenadas funcionam normamente com um disco preto, é a mesma coisa que a lista ordenada mas ao inves de ter uma numeração ou o alfabeto apenas temos caracteres diversos. por exemplo:
+
+        <h1>compras</h1>
+        <ul>
+            <li>leite           //este é o primeiro item da lista, mas não tem nenhuma numeração atras dele, ele apenas esta em cima
+            <li>nuggets         //este é o segundo item da lista, porque esta abaixo do primeiro
+            <li>banana          //este é o terceiro item da lista porque esta abaixo do segundo
+        </ul>
+
+        normalmente as ul vem com um disco preto acompanhando seu item da lista, nos podemos trocar isso com os tipos diferentes, sao eles:
+
+        type="disc"         //un disco preto(formato padrão)
+        type="square"       //um quadrado
+        type="circle"       //um circulo, semelhante ao disco mas nao é todo preto
+        type="nome"         //nada
+
+    
+    Listas de definições
+
+        as listas de definições sao um pouco diferente, elas sao compostas por algo a ser definido e a definição. exemplo:
+
+        <h1>materias importantes</h1>
+        <dl>
+            <dt>historia</dt>                                                           //a materia historia a ser definida
+            <dd>estuda o ser humano atraves do tempo</dd>                               //a definição da materia historia
+            <dt>PDC(programação de computadores)</dt>                                   //a materia PDC a ser definida    
+            <dd>estuda a logica de programação</dd>                                     //a definição da materia PDC
+            <dt>informatica</dt>                                                        //a materia informatica a ser definida
+            <dd>ensina como utilizar as tecnologias de forma correta</dd>               //a definição da materia informatica
+        </dl>
+
+    Tudo misturado
+
+        com todas essas listas que aprendemos tambem podemos fazer misturas de tudo, como por exemplo:
+
+        <h1>compras</h1>
+        <ol>
+            <li>mercado</li>
+                <ul type="square">
+                    <li>leite</li>
+                    <li>maizena</li>
+                    <li>refrigerante</li>
+                </ul>
+            <li>hortifrute</li>
+                <ul type="square">
+                    <li>berinjela</li>
+                    <li>banana</li>
+                </ul>
+            <li>padaria</li>
+                <ul type="square">
+                    <li>5 reais de pão</li>
+                    <li>10 de mussarela</li>
+                </ul>
+        </ol>
+        

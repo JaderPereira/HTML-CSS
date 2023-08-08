@@ -1,0 +1,9 @@
+html possui varias tags, ent vou colocar todas aqui e uma explicação porca sobre cada uma delas
+
+<h1></h1>           //é uma tag indicando o primeiro titulo, um titulo de nivel 1 por isso h1
+<p></p>             //paragrafo
+<hr>                //cria uma linha horizontal
+<ol></ol>           //cria uma lista ordenada
+<ul></ul>           //cria uma lista ordenada
+<dl></dl>           //cria uma lista com definições
+<li>                //define um item da lista

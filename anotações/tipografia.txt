@@ -1,0 +1,8 @@
+    tipografia(introdução)
+
+    A tipografia é o estudo dos tipos de escrita que escrevemos, é importante nos importarmos com a tipografia que vamos usar no nosso site para deixar ele mais serio e
+ coerente com o que o desenvolvedor quer passar, por exemplo, a palavra amor é mais qualificada em uma tipografia delicada e manuscrita como se fosse escrito por tinta e pena, poucas pessaos vao escolher a palavra amor com uma tipografia retro de 8bits, isso se da pelo fato da palavra amor esta correlacionada a coisas delicadas e bonitas, entao ela se encaixa mais numa tipografia delicada e detalhada.
+
+    O pai da imprensa
+    
+    o inventor da primeira "impressora" foi Johane gutenberg, ele nao inventou exatamente uma impressora, ele fez uma maquina de prensa que funcionava parecido com um carimbo, voce criava um carimbo com o formato das letras e prensava ele na folha e esperava secar

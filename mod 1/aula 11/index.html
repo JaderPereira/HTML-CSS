@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>midias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>tente abrir ese site em varios dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexicivel">
+    </picture>
+
+    <h1>utilizando audio</h1>
+    <p>vamos aprender a reproduzir audio em HTML5.</p>
+    <audio preload="auto" autoplay controls>
+        <source src="media/01 - o tamborzão tá rolando10.mp3" type="audio/mpeg">
+        <source src="media/01 - o tamborzão tá rolando10.ogg" type="audio/ogg">
+        <source src="media/01 - o tamborzão tá rolando10.wav" type="audio/wav">
+        <p>infelizmente o seu navegador nao consegue reproduzir audio <a href="media/01 - o tamborzão tá rolando10.mp3">clique aqui para baixar o arquivo em mp3</a></p>
+    </audio>
+    <!--o audio ele é bem do doido mas basicamente as coisas importantes q eu devo esquecer vou anotar:
+        quando tu coloca o source, src e o type tu tem q colocar o type do msm tipo de arquivo q tu colocou no src, ogg é ogg, wav é wav e mp3 é mpeg, so ele q é estranho mas vai ser o mais utilizado com certeza, esses 3 source ai servem pra se um nao rodar o outro vai, se nenhum rodar vai para aquele paragrafo com o link pra download do bagulho, bem maneirinho ne. a parada de começar o site com a musica rodando o guanabara tentou ensinar mas o autoplay n ta funfando, caso no futuro esteja, coloca um parametro ali em audio dps do preload, "autoplay" ai tu coloca o preload como auto.
+        controls é pra deixar bonitinho com botao de play e etc
+    -->
+</body>
+</html>

@@ -1,0 +1,17 @@
+o html é uma linguagem de CONTEUDO, lembrando que ela nao é uma linguagem de programação, ela é uma linguagem de marcação, aqui vai um codigo basico de HTML
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>document</title>
+    </head>
+
+    <body>
+
+    </body>
+</html>
+
+ali no head quer dizer a cabeça do meu site, o body quer dizer o corpo do site.
+tambem podemos usar o comando "HTML:5" para gerar uma estrutura basica de html que nem essa de cima

@@ -1,0 +1,27 @@
+modelo de caixa
+
+    o modelo de caixa é uma tecnologia do css para o auxilio da organização do site.
+
+definição para modelo de caixa e seus comandos
+
+    o modelo de caixa é composto pelo: conteudo, padding, border, outline e margin. isso quer dizer que tem uma diferença entre cada uma de suas funções.
+
+    conteudo
+        vai ser o que estiver dentro da sua tag, por exemplo, <h1> este é o conteudo </h1> dentro do h1 temos nosso conteudo
+    
+    padding
+        o padding vai ser um espaçamento entre o conteudo e a borda, quando nos criamos uma borda ela ja fica colada no conteudo, com o padding nos podemos modificar isso ajustando do jeito mais agradavel
+
+    border
+        uma borda que fica colada no conteudo, com o padding podemos desencostar a borda do conteudo como dito acima
+
+    outline
+        é o espaço entre a borda e o margin, ele fica do lado de fora da borda, ele nao interfere no margin. caso voce crie um outline tao grande que ele seja maior que a sua margem, a sua margme vai continuar sendo a mesma pois o outline nao interfere nisso
+
+    margin
+        é a parte mais esterior que temos de um bloco, a margem é o espaçamento do bloco, se eu quero uma div mais distante de um paragrafo eu uso o margim pra alterar isso.
+
+comandos para modelo de caixa
+
+    padding
+        

@@ -1,0 +1,11 @@
+as sombras sao necessarias para dar um destaque de profundidade no conteudo, mas isso nao quer dizer que voce deve fazer uma sombra que seja totalmente visivel e gritante, o seu cerebro ja vai perceber ela sem fazer esforço, voce so precisa indicar que ela ta ali, nao algo forte, grande e espalhado.
+nos temos dois tipos de sombra, a sombra outset e a inset. a sombra outset é a sombra que vai ficar por fora do elemento, a sombra inset é a q vai ficar por dentro.
+
+box-shadow: ;
+    o box shadow faz a sombra por fora do seu elemento, ele vai dar profundidade ao seu elemento, as configurações são: 
+    tipo da sombra(padrao: outset) > sombra pra direita-esquerda > sombra pra cima-baixo > espalhamento da sombra > tamanho da sombra > cor da sombra(padrao: preto)
+
+    exemplo:
+        box-shadow: inset 3px 3px 10px 5px black;
+        tipo da sombra = inset, sombra direita-esquerda = 3px, sombra cima-baixo = 3px, espalhamento da sombra = 10px, tamanho da sombra = 5px, cor da sombra = black.
+        
