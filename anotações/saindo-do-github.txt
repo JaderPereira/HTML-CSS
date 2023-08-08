@@ -1,0 +1,32 @@
+Aprendendo a modificar um projeto em outras maquinas passo a passo
+(para esse processo você precisa do: Visual Studio Code, Git e o Github Desktop instalados.)
+
+passo a passo:
+  1 - abra o github desktop e no canto superior esquerdo abra a aba file(mantenha o mouse em cima)
+  2 - clique no 'options' (ou 'opções') clicando no options ele ja aparece na parte de account(conta)
+  3 - entre na sua conta com o github.com
+  4 - quando você entrar na sua conta, na direita vão aparecer seus projetos
+  5 - clique no projeto que vai ser clonado e embaixo vai aparecer um botão azul dizendo pra clonar o projeto selecionado
+  6 - depois que clicado em clonar escolha aonde que o arquivo vai ficar, aperte no botão para clonar e espere os arquivos serem baixados
+
+DETALHE IMPORTANTE: quando seu arquivo já estiver clonado e você fez alguma alteração em algum codigo no VS code você tem que fazer uma configuração adicional para que na hora de comitar seu projeto não dê erro.
+
+  passo a passo:
+    1 - no canto superior esquerdo mantenha o mouse em cima de file e clique no 'options' (ou 'opções')
+    2 - dentro de options clique em 'git'
+    3 - dentro da parte 'git' você vai clicar no nome e no seu e-mail, CUIDADO: você não deve alterar nada, apenas clique no nome e no e-main
+    4 - depois do passo 3 clique em save, então você vai poder fazer o seu commit sem nenhuma dor de cabeça
+
+Como sair de tudo e não deixar nenhum rastro no computador usado:
+  passo a passo:
+    1 - feche os programas abertos (vs code, navegador, explorador de arquivos e etc) e deixe só o github desktop aberto.
+    2 - lá em cima clique em 'repository' (ou repositório) e vai em 'remove' (ou remover);
+    3 - marque a opção de enviar o projeto para lixeira e clique no botão 'remove'
+
+  É assim que removemos um repositório de um computador, não se engane pois seu projeto não sera apagado, ele apenas será removido da maquina utilizada. depois de remover seu repositório nos temos que sair da conta agora.
+  passo a passo:
+    1 - no canto superior esquerdo clique em 'file' (ou 'arquivo') vá em 'options' (ou 'opções')
+    2 - dentro de opções clique no botão 'sign out'. pronto saimos da conta, mas ainda não acabou.
+    3 - depois de sair da conta clique em 'git'
+    4 - apaque o nome e apague o e-main, feito isso aperte o botão de salvar
+    5 - esvazie a lixeira do computador para limpar seu projeto do computador.
