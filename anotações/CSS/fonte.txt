@@ -1,4 +1,4 @@
-tags sobre fonte
+propriedades sobre fonte
     vou anotar as tags sobre fonte pq tem coisa pra porra e eu n quero esquecer e ter q voltar no video do gustavo guanabara
     detalhe importante que quando voce for colocar uma fonte que tenha mais de uma palavra voce deve colocar ela entre aspas simples ou duplas, exemplo:
         correto: font-family: "Times New Roman";

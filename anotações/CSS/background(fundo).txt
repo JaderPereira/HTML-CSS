@@ -1,0 +1,32 @@
+o fundo de um site é importante para a apresentação dele, para isso temos diversas personalizações de fundo.
+
+propriedades:
+
+    background-color: blue;
+        define a cor do fundo.
+    
+    background-image: linear-gradiant(to bottom, blue, orange);         //degrade
+        linear-gradiant: existem diversas funções mas eu so aprendi as listadas acima. na primeira linha cria um fundo em degrade pra baixo, o linear-gradiante permite isso, 'to bottom' quer dizer que o degrade vai pra baixo, blue e orange são as cores. você pode colocar mais que duas cores, mas no minimo duas.
+        o linear-gradiant permite você decidir que cor vai dominar mais no degrade colocando uma porcentagem. por exemplo:
+            background-image: linear-gradiant(to left, blue 70%, orange);
+        nesta linha de codigo o azul esta ocupando 70% e o laranja os outros 30.
+
+    background-image: url('https://urldeumaimagem')                     //imagem externa
+        url(externo): pega uma imagem da web, copie o link da imagem e coloque dentro dos parenteses e entre aspas, tenha cuido pois as imagens externas podem ser arriscadas, se o site que você pegou a imagem cair por algum motivo a sua imagem some.
+
+    background-image: url('imagens/papeldeparede.jpeg')                 //imagem interna
+        url(interno): pega uma imagem que esta no seu computador, mais pratico e mais seguro (cuidado com o tamanho das imagens para nao deixar o seu site lento!).
+
+    background-size: 40px 40px;
+        define o tamanho do fundo, se o seu fundo for uma imagem muito pequena ela pode se repetir varias vezes.
+
+    background-repeat: repeat-y;
+        repete as imagens pequenas. exemplo: se eu pego uma imagem bem pequena e coloco como fundo do meu site que é bem grande a imagem vai se repetir cobrindo o fundo inteiro, isso acontece por que seu site ja é programado para repetir essas imagens pequenas em um fundo. para mudarmos isso usamos a propriedade background-repeat pra justamente quebrar essa repetição indesejada.
+
+            background-repeat: repeat;                 é o padrão, faz a imagem se repetir o site todo.
+            background-repeat: no-repeat;              nao repete a imagem e deixa apenas uma no canto superior esquerdo.                
+            background-repeat: repeat-x;               repete a imagem no eixo x(horizontal) mas corta ela se nao estiver certinha                
+            background-repeat: repeat-y;               repete a imagem no eixo y(vertical)  mas corta ela se nao estiver certinha
+            background-repeat: space;                  função parecida com repeat-x mas nao corta a imagem e deixa ela bonitinha(testa q vai ser melhor de entender)
+
+
