@@ -1,0 +1,5 @@
+no CSS nós temos um jeito de centralizar elementos horizontalmente de uma maneira simples, margin: auto; so isso ja deixa o elemento que esta sendo editado no meio verticalmente, mas quando falamos de centralização horizontalmente o negocio é outro.
+
+    position: relative;
+        os elementos ja vem como padrão na posição relativa, mas com o 'position: absolute;' nós liberamos 4 propriedades, o top, left, right e bottom, mas vamos trabalhar com top e left(cima e esquerda).
+        quando nós tempos 

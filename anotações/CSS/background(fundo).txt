@@ -5,20 +5,34 @@ propriedades:
     background-color: blue;
         define a cor do fundo.
     
-    background-image: linear-gradiant(to bottom, blue, orange);         //degrade
+    background-image:
+        background-image: linear-gradiant(to bottom, blue, orange);         //degrade
         linear-gradiant: existem diversas funções mas eu so aprendi as listadas acima. na primeira linha cria um fundo em degrade pra baixo, o linear-gradiante permite isso, 'to bottom' quer dizer que o degrade vai pra baixo, blue e orange são as cores. você pode colocar mais que duas cores, mas no minimo duas.
         o linear-gradiant permite você decidir que cor vai dominar mais no degrade colocando uma porcentagem. por exemplo:
             background-image: linear-gradiant(to left, blue 70%, orange);
         nesta linha de codigo o azul esta ocupando 70% e o laranja os outros 30.
 
-    background-image: url('https://urldeumaimagem')                     //imagem externa
+        background-image: url('https://urldeumaimagem')                     //imagem externa
         url(externo): pega uma imagem da web, copie o link da imagem e coloque dentro dos parenteses e entre aspas, tenha cuido pois as imagens externas podem ser arriscadas, se o site que você pegou a imagem cair por algum motivo a sua imagem some.
 
-    background-image: url('imagens/papeldeparede.jpeg')                 //imagem interna
+        background-image: url('imagens/papeldeparede.jpeg')                 //imagem interna
         url(interno): pega uma imagem que esta no seu computador, mais pratico e mais seguro (cuidado com o tamanho das imagens para nao deixar o seu site lento!).
 
-    background-size: 40px 40px;
-        define o tamanho do fundo, se o seu fundo for uma imagem muito pequena ela pode se repetir varias vezes.
+    background-position: center right;
+        esta propriedade vai definir em que local da imagem o seu elemento vai ficar. veja o exercicio 'fundo003.html' para entender melhor, mas resumidamente uma uma imagem começa no canto superior esquerdo e nos podemos configar isso, as vezes criamos uma div com uma imagem gigante que nao cabe na div inteira e so queremos pegar uma partezinha da imagem, pra isso usamos o background-position, esta propriedade tem 5 valores a se receber, você tem que colocar 2 desses e fazer a combinação que você quer para seu site
+
+            top             //cima
+            right           //direita
+            bottom          //baixo 
+            left            //esquerda
+            center          //centro
+        
+        como dito podemos usar esses valores para definir a posição do nosso background combinando duas delas, é importante explicar que os 2 valores inseridos são representados como top, center e bottom representando linhas horizontais e right, left e center sendo representados como colunas verticais. exemplo:
+
+            background-position: top right;                  //quer dizer que a imagem vai ficar na linha do topo e na coluna da direita
+            background-position: center bottom;              //quer dizer que a imagem vai ficar na linha de baixo e na coluna do centro
+            background-position: left bottom;                //quer dizer que a imagem vai ficar na linha de baixo e na coluna da direita
+            background-position: center center;              //a imagem vai ficar no centro.
 
     background-repeat: repeat-y;
         repete as imagens pequenas. exemplo: se eu pego uma imagem bem pequena e coloco como fundo do meu site que é bem grande a imagem vai se repetir cobrindo o fundo inteiro, isso acontece por que seu site ja é programado para repetir essas imagens pequenas em um fundo. para mudarmos isso usamos a propriedade background-repeat pra justamente quebrar essa repetição indesejada.
@@ -29,4 +43,43 @@ propriedades:
             background-repeat: repeat-y;               repete a imagem no eixo y(vertical)  mas corta ela se nao estiver certinha
             background-repeat: space;                  função parecida com repeat-x mas nao corta a imagem e deixa ela bonitinha(testa q vai ser melhor de entender)
 
+    background-size: 40px 40px;
+        define o tamanho do fundo, o primeiro valor é em cima e em baixo e o segundo é na direita e esquerda, se o seu fundo for uma imagem muito pequena ela pode se repetir varias vezes.
+        o brackground-size tem algumas peculiaridades, elas são:
 
+            background-size: 100%;       
+                quando você coloca 100% ele vai ficar 100% da imagem, quando você aumenta ou diminui a janela ela vai se ajustando(testa ai). porém se a janela ficar pequena acaba que na parte de baixo o fundo não pega e fica branco dependendo do seu background-color(testa pra entender pfv).
+
+            background-size: 100% 100%;
+                com dois 100% a imagem vai ficar 100% da tag que você esta configurando, e quando você vai redimensionando a janela a imagem vai se adaptando em cima e em baixo, diferente de só 1 100% que fica com uma parte escapando. Caso acabe dando um repeat indesejado, corrija a height do elemento.
+                (essa pratica não é boa porque achata a imagem)
+
+            background-size: contain;
+                o contain sem assemelha ao 100% mas é melhor ainda, ele se adapta a imagem e preserva seu tamanho sem deformar ela, se a sua tela for muito pequena em altura e grande em largura a imagem ira ficar com barras nas laterais direita e esquerda.
+            
+            background-size: cover;
+                cover quer dizer 'cobrir', o cover faz justamente isso ele cobre a tela toda com a imagem mesmo que precise da uma cortada nela, mas esse é a maneira mais bonita de todas e a que melhor se encaixa pra criação de um site responsivo.
+
+    background-attachment: fixed;
+        esta propriedade vai definir o vínculo do site, attachment é 'vínculo' e muita das vezes queremos mexer no vinculo do site.
+            os valores são:
+
+            background-attachment: scroll;     //a imagem vai descer com a barra de scroll(padrão).
+            background-attachment: fixed;      //mantem a imagem travada mesmo rolando (melhor configuração, combina bem com background-size: cover;)
+
+    shorthand background
+        uma mãozinha que ta mais pra mãozona pra configurações do background, a ordem dessa shorthand é:
+            color > image > position > repeat > [size] > attachment
+        Em alguns navegadores o size nao funciona essa shorthand mas é só colocar a configuração do size separado na linha de baixo do shorthand.
+
+        exemplo:
+
+            background: blue url('imagens/wallpaper003.jpg') center top no-repeat fixed;
+            background-size: cover;
+
+        quebrando o codigo:
+            blue = background-color
+            url('imagens/wallpaper003.jpg') = background-image
+            center top = background-position
+            no-repeat = background-repeat
+            fixed = background-attachment
