@@ -1,0 +1,37 @@
+Tabelas em HTML5 é um recurso único e útil quando se fala de estatisticas, hoje em dia muitas pessoas se perguntam se vale a pena usar tabelas em HTML5, vale a pena para a organização de estatisticas e não layout de um site. Antigamente lá no html4, os DEVs usavam tabelas pra criar o layout pro site, sendo que isso é muito arriscado, tabelas não foram feitas para fazer layout, ficar alterando um monte de coisa pode fazer com que elas quebrem muito rapido, é muito mais seguro e prático usar as divs semanticas do HTML5.
+
+nas tabelas nos temos uma hierarquia de tag, como a hierarquia de titulos.
+    table = tabela(area toda da tabela)
+        tr = linha da tabela('tr' significa table row, row = linha)
+            th = cabeçalho da tabela('th' quer dizer table header)
+            td = dado da tabela('td' significa table data, data = dado)
+
+exemplo: 
+    <body>                                          //abertura do corpo do site
+        <table>                                     //abertura da tabela
+            <tr>                                    //abertura da primeira linha da tabela, tr = table row = linha da tabela 
+                <th>cabeçalho1</th>                 //cabeçalho do cabeçalho da primeira linha ('</th>' opcional)
+                <td>dado1</td>                      //dado da primeira linha ('</td>' opcional)
+            </tr>                                   //fechamento da primeira linha (opcional)
+        </table>                                    //fechamento da tabela  
+    </body>                                         //fechamento do corpo do site
+
+border-collapse: ;
+    quando criamos tabelas temos os dados com um espaçamento entre eles, para as bordas se conectarem usamos a propriedade:
+
+        border-collapse: collapse;                  //dados juntos (melhor opção, testa ai)
+        border-collapse: separate;                  //dados separados
+
+        atenção! esta configuração vai dentro da tag 'table'
+
+Alinhamento de dados na tabela:
+    quando temos uma tabela grande acaba sobrando espaço dentro das celulas e o dado la dentro fica desalhinhado, nos usamos duas propriedades para corrigir isso de maneira simples. São elas, 'text-align: ;' e 'vertical-align: ;' essas duas propriedades para tabelas recebem 1 entre 3 valores.
+        text-align: ;
+            left = o dado ficara alinhado horizontalmente na esquerda(padrão)
+            center = o dado ficara alinhado horizontalmente no meio
+            right = o dado ficara alinhado horizontalmente na direita
+
+        vertical-align: ;
+            top = o dado ficara alinhado verticalmente no topo
+            middle = o dado ficara alinhado verticalmente no meio
+            bottom = o dado ficara alinhado verticalmente em baixo

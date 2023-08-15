@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tabelas</title>
     <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
         table {
             border-collapse: collapse;
             width: 400px;
+            height: 400px;
         }
         td {
             padding: 8px;
             border: 1px solid black;
+            text-align: center; /*centralização horizontal*/
+            vertical-align: middle; /*centralização vertical*/
+        }
+        .numero{
+            text-align: end;
         }
     </style>
 </head>
@@ -20,16 +29,16 @@
     <table>
         <tr>
             <td>n1</td>
-            <td>s1</td>
+            <td class="numero">s1</td>
             <td>b1</td>
         </tr>
         <tr>
             <td>n2</td>
             <td>s2</td>
-            <td>b2</td>
+            <td class="numero">b2</td>
         </tr>
         <tr>
-            <td>n3</td>
+            <td class="numero">n3</td>
             <td>s3</td>
             <td>b3</td>
         </tr>
