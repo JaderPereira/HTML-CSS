@@ -6,15 +6,15 @@ nas tabelas nos temos uma hierarquia de tag, como a hierarquia de titulos.
             th = cabeçalho da tabela('th' quer dizer table header)
             td = dado da tabela('td' significa table data, data = dado)
 
-exemplo: 
-    <body>                                          //abertura do corpo do site
-        <table>                                     //abertura da tabela
-            <tr>                                    //abertura da primeira linha da tabela, tr = table row = linha da tabela 
-                <th>cabeçalho1</th>                 //cabeçalho do cabeçalho da primeira linha ('</th>' opcional)
-                <td>dado1</td>                      //dado da primeira linha ('</td>' opcional)
-            </tr>                                   //fechamento da primeira linha (opcional)
-        </table>                                    //fechamento da tabela  
-    </body>                                         //fechamento do corpo do site
+    exemplo: 
+        <body>                                          //abertura do corpo do site
+            <table>                                     //abertura da tabela
+                <tr>                                    //abertura da primeira linha da tabela, tr = table row = linha da tabela 
+                    <th>cabeçalho1</th>                 //cabeçalho do cabeçalho da primeira linha ('</th>' opcional)
+                    <td>dado1</td>                      //dado da primeira linha ('</td>' opcional)
+                </tr>                                   //fechamento da primeira linha (opcional)
+            </table>                                    //fechamento da tabela  
+        </body>                                         //fechamento do corpo do site
 
 border-collapse: ;
     quando criamos tabelas temos os dados com um espaçamento entre eles, para as bordas se conectarem usamos a propriedade:
@@ -35,3 +35,15 @@ Alinhamento de dados na tabela:
             top = o dado ficara alinhado verticalmente no topo
             middle = o dado ficara alinhado verticalmente no meio
             bottom = o dado ficara alinhado verticalmente em baixo
+
+tabelas grandes
+    No html5 nos temos tags semanticas(main, section, header e etc), e agora nos temos tambem tag's semânticas pra tabelas, então esse metodo ensinado a cima é uma maneira de criar a tabela de uma forma não semântica, o modo semântico será ensinado agora mas antes é bom estabelecer que tabelas semânticas são aquelas tabelas mais grandes com uma quantidade grande de conteudos, e as pequenas podem ser feitas da maneira não semântica. Claro que eu posso fazer tabelas pequenas usando tags semânticas, nada me impede mas é sempre bom saber e utilizar dos dois jeito para aprender melhor, mas lembrando que em tabelas grandes é mais recomendado usar uma tabela com tags semânticas.
+    
+    Anatomia para tabelas grandes
+        table
+            thead(opcional)
+                pode ter: tr,td,th
+            tbody
+                pode ter: tr,td,th
+            tfoot(opcional)
+                pode ter: tr,td,th
