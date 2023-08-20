@@ -1,6 +1,6 @@
 Tabelas em HTML5 é um recurso único e útil quando se fala de estatisticas, hoje em dia muitas pessoas se perguntam se vale a pena usar tabelas em HTML5, vale a pena para a organização de estatisticas e não layout de um site. Antigamente lá no html4, os DEVs usavam tabelas pra criar o layout pro site, sendo que isso é muito arriscado, tabelas não foram feitas para fazer layout, ficar alterando um monte de coisa pode fazer com que elas quebrem muito rapido, é muito mais seguro e prático usar as divs semanticas do HTML5.
 
-nas tabelas nos temos uma hierarquia de tag, como a hierarquia de titulos.
+tabelas pequenas(não semânticas).
     table = tabela(area toda da tabela)
         tr = linha da tabela('tr' significa table row, row = linha)
             th = cabeçalho da tabela('th' quer dizer table header)
@@ -36,14 +36,57 @@ Alinhamento de dados na tabela:
             middle = o dado ficara alinhado verticalmente no meio
             bottom = o dado ficara alinhado verticalmente em baixo
 
-tabelas grandes
+escopo
+    Nas tabelas nós tambem temos o escopo, neste caso ele é muito mais simples e nada complexo de entender. Quanto temos uma coluna indicando algum dado como, digamos que eu criei uma tabela de um mercado aonde tem o nome dos produtos e o preço, dentro dessa tabela eu coloquei em baixo de produto "guaravita" e em baixo de preço "R$2.00", quer dizer que se os dados estão abaixo do cabeçalho e por isso estão em um escopo de coluna. Quando nosso th é em uma linha nós temos um escopo row que indica que o cabeçalho esta do lado mas não em cima do dado. Esta função do escopo não altera visualmente a tabela mas ajuda nos navegadores a interpretarem a tabela melhor e também serve como orientação para entender melhor uma tabela so olhando seu codigo. O exemplo de escopo de tabelas está em 'tabelas grandes (semanticas)'.
+
+tabelas grandes (semanticas)
     No html5 nos temos tags semanticas(main, section, header e etc), e agora nos temos tambem tag's semânticas pra tabelas, então esse metodo ensinado a cima é uma maneira de criar a tabela de uma forma não semântica, o modo semântico será ensinado agora mas antes é bom estabelecer que tabelas semânticas são aquelas tabelas mais grandes com uma quantidade grande de conteudos, e as pequenas podem ser feitas da maneira não semântica. Claro que eu posso fazer tabelas pequenas usando tags semânticas, nada me impede mas é sempre bom saber e utilizar dos dois jeito para aprender melhor, mas lembrando que em tabelas grandes é mais recomendado usar uma tabela com tags semânticas.
     
     Anatomia para tabelas grandes
-        table
-            thead(opcional)
-                pode ter: tr,td,th
-            tbody
-                pode ter: tr,td,th
-            tfoot(opcional)
-                pode ter: tr,td,th
+    table                               inicio da tabela
+        caption                         Titulo da tabela
+        thead                           cabeçalho da tabela
+            tr                          linha do cabeçalho da tabela
+                th                      celula de cabeçalho
+        tbody                           corpo da tabela     
+            tr                          linha do corpo da tabela
+                th ou td                tanto td quanto th podem ser usados no corpo
+        tfoot                           rodapé da tabela
+            tr                          linha do rodapé
+                th ou td                tanto td quanto th podem ser usados no rodapé
+
+    exemplo: eu preciso organizar minhas notas de materias tecnicas.
+
+    <table>                                             inicio da tabela
+        <caption>Notas técnicas</caption>               titulo da tabela
+        <thead>                                         inicio da cabeça da tabela
+            <tr>                                        linha da cabeça da tabela
+                <th>*</th>                              celula inútil, apenas para organização
+                <th scope="col">PDC</th>                cabeçalho de PDC com o escopo de coluna
+                <th scope="col">AMC</th>                cabeçalho de AMC com o escopo de coluna
+            </tr>                                       fim da linha da cabeça da tabela
+        </thead>                                        fim da cabeça da tabela
+        <tbody>                                         inicio do corpo da tabela
+            <tr>                                        primeira linha do corpo da tabela
+                <th scope="row">1 bimestre</th>         cabeçalho do primeiro bimestre com escopo de linha
+                <td>6</td>                              dado do primeiro bimestre da materia de PDC
+                <td>8</td>                              dado do primeiro bimestre da materia de AMC
+            </tr>                                       fim da primeira linha do corpo da tabela
+            <tr>                                        inicio da segunda linha da tabela
+                <th scope="row">2 bimestre</th>         cabeçalho do segundo bimestre com o escopo de linha
+                <td>8</td>                              dado do segundo bimestre da materia de PDC
+                <td>9</td>                              dado do segundo bimestre da materia de AMC
+            </tr>                                       fim da segunda linha do corpo da tabela
+        </tbody>                                        fim do corpo da tabela
+        <tfoot>                                         inicio do rodapé da tabela
+            <tr>                                        inicio da primeira linha do rodapé da tabela
+                <th scope="row">total</th>              cabeçalho da primeira linha do rodapé da tabela com escopo de linha
+                <td>13</td>                             dado do total de pontos da materia de PDC
+                <td>17</td>                             dado do total de pontos da materia de AMC
+            </tr>                                       fim da primeira linha do rodapé da tabela
+        </tfoot>                                        fim do rodapé da tabela
+    </table>                                            fim da tabela
+
+    Caso ainda não tenha ficado muito claro, abra o exercício tabela002.html que lá no final a tabela está lá do mesmo jeito.
+
+falta colocar anotações sobre tabelas zebradas e cabeçalho fixo
