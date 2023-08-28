@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio de tabelas</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            text-align: center;
+            width: 500px;
+        }
+        caption {
+            font-size: 25px;
+            padding-bottom: 10px;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .csexo {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+            <col class="cnome">
+            <col class="csexo">
+            <col class="cidade">
+            <col class="cprof">
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th>Nome</th>
+            <th>Sexo</th>
+            <th>Idade</th>
+            <th>Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>carlos</td>
+            <td>M</td>
+            <td>25</td>
+            <td>diretor</td>
+        </tr>
+        <tr>
+            <td>Joao</td>
+            <td>M</td>
+            <td>25</td>
+            <td>cameraman</td>
+        </tr>
+        <tr class="destaque">
+            <td>Bruno</td>
+            <td>M</td>
+            <td>25</td>
+            <td>gari</td>
+        </tr>
+        <tr>
+            <td>suzana</td>
+            <td>F</td>
+            <td>25</td>
+            <td>gerente</td>
+        </tr>
+        <tr>
+            <td>julia</td>
+            <td>F</td>
+            <td>25</td>
+            <td>produtora</td>
+        </tr>
+    </table>
+</body>
+</html>
