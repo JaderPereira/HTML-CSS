@@ -1,4 +1,4 @@
-Tabelas em HTML5 é um recurso único e útil quando se fala de estatisticas, hoje em dia muitas pessoas se perguntam se vale a pena usar tabelas em HTML5, vale a pena para a organização de estatisticas e não layout de um site. Antigamente lá no html4, os DEVs usavam tabelas pra criar o layout pro site, sendo que isso é muito arriscado, tabelas não foram feitas para fazer layout, ficar alterando um monte de coisa pode fazer com que elas quebrem muito rapido, é muito mais seguro e prático usar as divs semanticas do HTML5.
+Tabelas em HTML5 é um recurso único e útil quando se fala de estatisticas, hoje em dia muitas pessoas se perguntam se vale a pena usar tabelas em HTML5, vale a pena para a organização de estatisticas e não layout de um site. Antigamente lá no html4, os DEVs usavam tabelas pra criar o layout pro site, sendo que isso é muito arriscado, tabelas não foram feitas para fazer layout, ficar alterando um monte de coisa pode fazer com que elas quebrem muito rapido, é muito mais seguro e prático usar as divs semanticas do HTML5. É importante ressaltar também que os dados que vemos das tabelas são também chamados de celulas, então, quando a palavra celula for citada ela esta se referindo a um dado da tabela.
 
 tabelas pequenas(não semânticas).
     table = tabela(area toda da tabela)
@@ -89,4 +89,40 @@ tabelas grandes (semanticas)
 
     Caso ainda não tenha ficado muito claro, abra o exercício tabela002.html que lá no final a tabela está lá do mesmo jeito.
 
-falta colocar anotações sobre tabelas zebradas e cabeçalho fixo
+tabelas zebradas
+    Para fazermos tabelas com efeito zebrado nos vamos usar uma pseudo-classe, vai funcionar na seguinte forma: essa pseudo classe vai pegar o filho do seu seletor e vai modificar apenas os pares ou ímpares, exemplo: imagine uma tabela semântica  aonde eu tenho thead, tbody e tfoot dentro do tbody eu tenho minhas configurações linhas e meus dados configurados, é fato que os filhos de tbody(corpo da tabela) são as linhas da tabela, e por mais que não conseguimos ver essas linhas são numeradas, para selecionarmos essas linhas montamos o css da seguinte forma:
+
+    <style>                                     //começo do estilo
+        tbody > tr::nth-child(odd) {            //tbody que é pai de tr que tr esta recebendo uma pseudo-classe chamada "nth-child" que pega as linhas impares
+            background-color: grey;             //configuração das linhas ímpares
+        }
+    </style>                                    //fim do estilo
+
+    a numeração das linha vai do numero um ate quantas linhas você tiver. Vale lembrar que podemos utilizar a o nth-child(even) que vai pegar os numeros pares.
+
+cabeçalho fixo
+    um cabeçalho fixo em uma tabela pode ser importante caso ela seja muito grande, as vezes vamos ver uma tabela muito grande e acabamos nos perdendo para o que estamos analisando, para mantermos um cabeçalho fixo vamos colocar a propriedade 'position: relative;' dentro do seletor 'table' assim podemos utilizar a propriedade 'position: sticky;' no seletor 'th' que são as celulas de cabeçalho da tabela, com isso elas ficam grudadas quando elas somem da tela.
+
+mesclagem de celulas
+    A mesclagem de celulas está presente em diversas tabelas por aí hoje em dia, a mescalgem de celulas é algo muito simples de se fazer e nem precisa do css! Apenas 2 atributos do proprio HTML e pronto, você já consegue mesclar celulas como você quiser. Para mesclarmos uma celula nos vamos usar 2 atributos do HTMl que são is 'colspan=""' e o 'rowspan=""', voce pode conferir o arquivo 'tabela003' para acompanhar essa explicação que vai ficar melhor para absorver, nós já sabemos que col significa coluna e row significa linha. Para criar uma celula mesclada você tem que primeiro deixar um espaço seja na linha ou na coluna dela para fazer essa mesclagem, por exemplo: eu crio uma tabela que eu tenho 3 celulas de cabeçalho mas eu tenho 4 colunas, está faltando um espaço a ser preenchido porque eu quero que ele seja da celula ao lado, para isso eu coloco o atributo 'colspan="2"' para deixar a celula ocupando duas colinas. não confunda as coisas, se você quiser uma celula que ocupe 2 colunas, voce usa o colspan se você quer uma celula que ocupe 2 linhas use o rowspan, na hora de fazer o codigo você pode se perguntar um pouco o atributo certo a colocar mas sempre pense qual a função que sua celula vai exercer, neste exemplo minha celula foi mandada para ocupar duas colunas e por isso que eu coloquei o colspan. exemplo do html:
+
+        <table>                                 //inicio da tabela
+        <tr>                                    //inicio da primeira linha
+            <td>1</td>                          //primeiro dado da primera linha
+            <td>2</td>                          //segundo dado da primeira linha
+            <td rowspan="3">3</td>              //terceiro dado da primeira linha que esta ocupando 3 linhas, ele vai da primeira ate a ultima linha da tabela
+        </tr>                                   //fim da primeira linha
+        <tr>                                    //inicio da segunda linha
+            <td>4</td>                          //primeiro dado da segunda linha
+            <td>5</td>                          //segundo dado da segunda linha
+                                                //aqui iria o terceiro dado da segunda linha mas ele esta sendo ocupado pelo terceiro dado da primeira linha
+        </tr>                                   //fim da segunda linha
+        <tr>                                    //inicio da terceria linha
+            <td>7</td>                          //primeiro dado da terceira linha
+            <td>8</td>                          //segundo dado da terceira linha
+                                                //aqui iria o terceiro dado da terceira linha mas ele esta sendo ocupado pelo terceiro dado da primeira linha
+        </tr>                                   //fim da terceira linha
+    </table>                                    //fim da tabela.
+
+    lembrando, abra o arquivo "tabela003.html" para conferir melhor a mesclagem de celulas em tabelas
+    
