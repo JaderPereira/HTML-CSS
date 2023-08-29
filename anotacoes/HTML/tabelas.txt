@@ -126,5 +126,18 @@ mesclagem de celulas
 
     lembrando, abra o arquivo "tabela003.html" para conferir melhor a mesclagem de celulas em tabelas
     
-selecionando colunas
-    quando estilizamos uma tabela nos podemos colocar apenas um id em uma linha e ja muder ela diretamente, mas no caso da coluna o assunto é diferente. Para selecionar colunas e estilizar-las você deve abrir uma tag embaixo da tag "<table>" chamada colgroup e la dentro você vai utilizar a tag <col> e vai colocar a quantidade de <Col> igual a quantidade de colunas que a sua tabela tem. Beleza cada tag <col> está responsavel por uma tabela e então é so colocala uma class ou um id e usalo nas CSS.
+selecionando colunas para serem estilizadas
+    quando estilizamos uma tabela nos podemos colocar apenas um id em uma linha e ja muder ela diretamente, mas no caso da coluna o assunto é diferente. Para selecionar colunas e estilizar-las você deve abrir uma tag embaixo da tag "<table>" chamada <colgroup> e </colgroup> e la dentro você vai utilizar a tag <col> e vai colocar a quantidade de <Col> igual a quantidade de colunas que a sua tabela tem. Beleza cada tag <col> está responsavel por uma tabela e então é so colocala uma class ou um id e usalo nas CSS.
+    Nas tags col nós temos um atributo interessante que é o span="" o span faz com que o Col esteja selecionando duas ou mais colunas, por exemplo: eu tenho uma tabela que tem quatro colunas e quero selecionar a terceira e última coluna.
+
+        <Colgroup>
+            <Col>
+            <Col>
+            <Col span="2">
+        </Colgroup>
+
+    Essa tabela imaginaria tem 4 colunas, mas apenas só tem 3 tags <Col> porque eu tenho uma tag <Col> com um span valendo 2 que já pega a última coluna
+
+Tabelas responsivas
+    Para deixar tabelas responsivas nos usamos a propriedade "overflow" overflow significa transbordando, quando temos tabelas grandes em celulares é comum elas vazarem pro lado e pra isso temos o overflow, existe o overflow-x que vai dar conta do transbordamento horizontal, também existe o overflow-y que vai dar conta do transbordamento vertical, e temos o overflow só overflow que dá conta dos dois.
+    Nos temos algum valores para a propriedade overflow mas a daora de usar é "auto" ou "scroll" testa pra tu ver pq é melhor doq eu explicar.

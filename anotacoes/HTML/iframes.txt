@@ -1,0 +1,21 @@
+Definição
+    Iframes são de forma forçada na tradução: quadros em linhas, apenas lendo não fica tão claro mas é bem simples, o iframe é basicamente um site dentro de outro site so que seu display é inline. confira o arquivo iframe01.html dentro do modulo 4 na aula 1 e voce entenderá melhor.
+
+como usar?
+    para usar um iframe é bem simple, abra a tag <iframe> e depois feche ela com </iframe>, feito isso vamos adicionar alguns atributos a esse iframe, vamos colocar scr="" e o valor dentro vai ser o link que querermos transmitir nosso iframe. depois do scr vamos colocar o frameborder="" para definirmos uma borda para o iframe, isso não é necessário nem nada porque quando aplicar seu scr o site ja vai cobrir essa borda criada pelo frameborder, mas caso queira dimensionar seu iframe antes de colocar o src utilize o frameborder e o valor dentro dele você coloca em numeros. exemplo:
+
+        <iframe scr="https://google.com.br" frameborder="1"></iframe>
+
+    Uma coias interessante dos iframes que você pode estranhar de inicio é o seu tamanho, seu tamanho base é de 300 pixels de largura e 150 de altura. Nós podemos mudar esse tamanho adicionando os atributos 'height=""' e o 'width=""' sem problema algum, mas lembre-se, isso so afetará 1 iframe por vez, se você quiser todos utilize o CSS que tambem da bom. Exemplo:
+
+    <iframe scr="https://google.com.br" frameborder="1" height="500px" width="300px"></iframe>
+        
+Incompatibilidade com alguns navegadores
+    alguns navegadores sejam de celulares ou computadores podem não ter compatibilidade com iframes, para isso há sim uma solução, você pode ter percebido que no uso do iframe nos abrimos e fechamos uma tag mas não colocamos nada dentro dela, porque é ali que vai entrar nossa mensagem caso o navegador não tenha suporte para iframe. Vai funcionar da seguinte forma, você pode colocar uma mensagem falando que seu navegador não suporta o iframe ou colocar o link do site mesmo ao inves do iframe, ou melhor ainda que seria juntar os dois! Por exemplo:
+
+    <iframe scr="https://facebook.com.br" frameborder="1">
+        <p>Seu navegador não tem suporte para carregar o site aqui dentro, acesse <a href="https://facebook.com.br">este link</a> e você sera direcionado para o site.</p>
+    </iframe>
+
+18:46 > 19:50 asaf
+19:16 > 20:16 paula
