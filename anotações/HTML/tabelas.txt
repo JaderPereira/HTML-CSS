@@ -126,3 +126,5 @@ mesclagem de celulas
 
     lembrando, abra o arquivo "tabela003.html" para conferir melhor a mesclagem de celulas em tabelas
     
+selecionando colunas
+    quando estilizamos uma tabela nos podemos colocar apenas um id em uma linha e ja muder ela diretamente, mas no caso da coluna o assunto é diferente. Para selecionar colunas e estilizar-las você deve abrir uma tag embaixo da tag "<table>" chamada colgroup e la dentro você vai utilizar a tag <col> e vai colocar a quantidade de <Col> igual a quantidade de colunas que a sua tabela tem. Beleza cada tag <col> está responsavel por uma tabela e então é so colocala uma class ou um id e usalo nas CSS.
