@@ -17,5 +17,16 @@ Incompatibilidade com alguns navegadores
         <p>Seu navegador não tem suporte para carregar o site aqui dentro, acesse <a href="https://facebook.com.br">este link</a> e você sera direcionado para o site.</p>
     </iframe>
 
-18:46 > 19:50 asaf
-19:16 > 20:16 paula
+abrindo diversos sites em 1 iframe
+    Iframes não são necessariamentes utilizados para abrir somente uma pagina, nos podemos utilizar apenas 1 iframe para abrir mais de uma pagina sem problema algum. Para isso vamos utilizar um atributo chamado 'name=""'
+    Primeiro, tenha mais de um arquivo em mãos aí, e crie seus links para cada arquivo, você deve colocar o href de cada arquivo nos links. Feito isso crie seu iframe e coloque o atributo name="" e escolha um nome para colocar de valor, se você se recorda bem os links tem um atributo interessante que se chama target="" com ele você pode direcionar se ao clicar no link sera aberto outra pagina ou a pagina será substituida, agora que você tem o name no seu iframe, coloque ele no target de todos os links, assim quando você abrir seus links eles irão para o iframe e não para outra pagina ou sobrebor a que você esta utilizando. Exemplo:
+
+        <a href="pagina1.html" target="saida">pagina 1</a>
+        <a href="pagina2.html" target="saida">pagina 2</a>
+        <a href="pagina3.html" target="saida">pagina 3</a>
+        <a href="pagina4.html" target="saida">pagina 4</a>
+
+        <iframe src="" name="saida" frameborder="0"></iframe>
+    
+    Aqui nesse exemplo podemos ver que cada link quando for clicado seu resultado vai sair no iframe porque o seu target esta direcionado ao iframe pelo nome dele.
+
