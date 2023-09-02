@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>formulario 2</title>
     <style>
-        body {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        * {
+            font-family: monospace;
         }
     </style>
 </head>
 <body>
-    <form action="cadastro.js" method="post">
+    <form action="cadastro.js" method="post" autocomplete="on">
         <p>
             <label for="iusuario">usuário: </label>
-            <input type="text" name="usuario" required id="iusuario" minlength="5" maxlength="20" size="20" placeholder="nome do usuário">
+            <input type="text" name="usuario"  id="iusuario" autocomplete="username" minlength="5" maxlength="20" size="20" placeholder="nome do usuário" required>
         </p>
         <p>
             <label for="isenha">senha:</label>
-            <input type="password" name="senha" required id="isenha" minlength="8" size="10" placeholder="********">
+            <input type="password" name="senha"  id="isenha" autocomplete="current-password" minlength="8" size="10" placeholder="********" required>
         </p>
         <p>
             <input type="submit" value="enviar">

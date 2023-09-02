@@ -8,21 +8,76 @@ input's
     tipos de input:
 
         <input type="text">
-            cria uma caixa para adicionar texto
+            cria uma caixa para adicionar texto.
         
         <input type="submit">   
-            cria um botão para enviar valores digitados
+            cria um botão para enviar valores digitados.
 
-        <input type="">
-        <input type="">
-        <input type="">
-        <input type="">
-        <input type="">
-        <input type="">
-        <input type="">
-        <input type="">
-        <input type="">
-        <input type="">
+        <input type="password">
+            cria uma caixa aonde o texto inserido fica escondido.
+
+        <input type="reset">
+            limpa o que foi digitado nos input's de texto.
+
+        <input type="number">
+            cria uma caixa parecida com input do tipo text mas nesta só são aceitados valores numéricos
+
+        <input type="month">
+            cria uma caixa aonde você pode adicionar um mês. testa que o negócio é bacana. Algo importante sobre essa caixa é que quando adicionamos o atributo value a ela, devemos colocar o valor em uma ordem diferente, a ordem é: ano-mes. por exemplo: value="2023-03".
+
+        <input type="date">
+            cria uma caixa similar ao do input do tipo month, mas pega o dia, mes e ano. Algo importante sobre essa caixa é que quando adicionamos o atributo value a ela, devemos colocar o valor em uma ordem diferente, a ordem é: ano-mes-data. por exemplo: value="2023-03-23".
+
+Atributos dos input's
+    A tag input tem MUITOS atributos, to anotando todos aqui porque é necessário.
+
+    atributos:
+
+    autocomplete=""                     <!--aplicado no form-->
+        serve para habilitar ou desabilitar aquelas opções de completar automaticamente valores já digitados em um tipo de input. seus valores são: "on" e "off". 
+
+    type=""                             <!--aplicado no input-->
+        serve para indicar o tipo do input, exemplo: type="text" o input vai ser do tipo texto
+
+    name=""                             <!--aplicado no input-->
+        serve para indenficar o input em uma linguagem de programação, melhor usado no php(server).
+
+    id=""                               <!--aplicado no input-->
+        serve para indenficar o input seja no css ou no JavaScript.
+
+    value=""                            <!--aplicado no input-->
+        O value tem 2 funcionalidades, uma delas são em botões e outra em alguns input's tipo de texto. o valor de value em botões vai ser o que vai estar escrito dentro do botão. Já em input's como: text, month, number e etc. a funcionalidade é já deixar o valor que está no value dentro da caixa automaticamente.
+
+    required                            <!--aplicado no input-->
+        serve para deixar o input obrigatório, deixando assim o usuário enviar as informações somente depois de preencher os campos requesitdos.
+
+    minlength=""                        <!--aplicado no input-->
+        serve para definir um número mínimo de caracteres a ser colocada em um input.
+
+    maxlength=""                        <!--aplicado no input-->
+        serve para definir um número máximo de caracteres a ser colocada em um input.
+
+    max=""                              <!--aplicado no input do tipo number-->
+        serve para delimitar o número máximo que aquele input number vai aceitar.
+
+    min=""                              <!--aplicado no input do tipo number-->
+        serve para delimitar o número mínimo que aquele input number vai aceitar.
+
+    step=""                             <!--aplicado no input do tipo number-->
+        serve para deixar que o input number receba valores reais, como padrão ele so aceita valores inteiros. Coloque o step assim: step="0.5"
+
+    size=""                             <!--aplicado no input-->
+        serve para delimitar um tamanho em largura de um input, seu valor é a quantidade de caracteres que poderão ser escritas(pode passar tambem, testa ai).
+
+    placeholder=""                      <!--aplicado no input-->
+        serve para deixar um texto meio transparente dentro da caixa do input, como se fosse um indicativo para o valor a ser colocado(teste e tu vai entender).
+
+    autocomplete=""                     <!--aplicado no input(requesito: autocomplete no form tem que estar on)-->
+        serve para especificar o tipo de autocompletação que o seu navegador tem que fazer em determinado input.tem muito valor, da uma olhada que tu acha o que procura.
+
+    for=""                              <!--aplicado no label-->
+        serve para que um texto indique o input que ele está se remetendo, o valor do for tem que ser o id do input.
+    
 
 sugestão em caixas de resposta
     em alguns input's que vão texto podemos as vezes no deparar com o navegador rebuscando valores que você já tinha digitado antes e os relembra para você, na maioria dos casos isso é uma ajuda mas caso isso esteja te encomodando podemos tiralo utilizando o atributo autocomplete="off" na tag <form>. fica assim:
@@ -32,12 +87,18 @@ sugestão em caixas de resposta
    </form>
 
 diferença entre name e id em um input
-    No input nos temos 2 atributos, o name e o id que nós já conhecemos. Esses dois atributos servem para que os dados sejam enviados para as linguagens de programação que vão tratar daqueles dados digitados, o nome e o id tem uma função parecida, indentificar algo. O name é mais recomendado para o php(servidor) e o id é bem melhor para o JavaScript.
+    No input nos temos 2 atributos bases, o name, e o id que nós já conhecemos. Esses dois atributos servem para que os dados sejam enviados para as linguagens de programação que vão tratar daqueles dados digitados, o nome e o id tem uma função parecida, indentificar algo. O name é mais recomendado para o php(servidor) e o id é bem melhor para o JavaScript.
 
 label
-    a tag label serve para auxiliar um input, por exemplo: estamos criando uma tela de cadastro aonde vamos pedir o nome de usuario, gmail e senha. nós devemos indentificar o que cada uma dessas caixas são, então antes da caixa do nome eu vou colocar "nome:" correto. Isso pode ser um indicativo visual para nós mas temos uma tag que vái fazer com que esse texto indentificando um input seja mais conectado com ele ainda, a tag <label> </label> vai facilitar isso para a gente, para indenficarmos para o computador que aquele label pertence a algum input nós usamos o atributo for="" que vai indicar para qual input estamos apontando. coloque um id em seu input e esse sera o valor do for="" (name não funciona tem q ser id). Beleza quais são as vantagens da tag label? se você clicar no texto que esta indicando o input (tipo o "nome:" que foi citado a cima) o seu click vai fazer com que você ja seja direcionado ao input para digitar o que se pede, e isso pode ajudar bastante em celulares até porque são telas pequenas e as vezes é meio difícil clicar em uma caixinha bem pequenininha. Alem dessa vantagem para telas menores nós também temos que lembrar que nós não aprendemos só porque vai gerar um resultado imenso no site, e sim para ser um profissional no desenvolvimento de sites que sabe de tudo de maneira completa, use o label, é maneiro e n faz seu dedo cair. exemplo:
+    a tag label serve para auxiliar um input, por exemplo: estamos criando uma tela de cadastro aonde vamos pedir o nome de usuario, gmail e senha. nós devemos indentificar o que cada uma dessas caixas são, então antes da caixa do nome eu vou colocar "nome:" correto. Isso pode ser um indicativo visual para nós mas temos uma tag que vái fazer com que esse texto indentificando um input seja mais conectado com ele ainda, a tag <label> </label> vai facilitar isso para a gente. para indenficarmos para o computador que aquele label pertence a algum input nós usamos o atributo for="" que vai indicar para qual input estamos apontando. coloque um id em seu input e esse sera o valor do for="" (name não funciona tem q ser id). Beleza quais são as vantagens da tag label? se você clicar no texto que está indicando o input (tipo o "nome:" que foi citado a cima) o seu click vai fazer com que você ja seja direcionado ao input para digitar o que se pede, e isso pode ajudar bastante em celulares até porque são telas pequenas e as vezes é meio difícil clicar em uma caixinha bem pequenininha. Alem dessa vantagem para telas menores nós também temos que lembrar que nós não aprendemos só porque vai gerar um resultado imenso no site, e sim para ser um profissional no desenvolvimento de sites que sabe de tudo de maneira completa, use o label, é maneiro e n faz seu dedo cair. exemplo:
 
     <form>
-        <p><label>Nome:</label> </p>
+        <p>
+            <label for="idnome">Nome:</label>
+            <input type="text" name="nome" id="idnome">
+        </p>
     </form>
+
+metodos get e post
+    quando enviamos dados de formulários eles são direcionados para o valor que está dentro do action, nisso quando enviamos um formulário percebemos que o arquivo que esta dentro de action esta lá. Podemos tambem notar que na url veremos os dados que digitamos, isso é interessante mas por outro lado é bem perigoso, caso você digite uma senha por exemplo, ela vai ficar visivel lá. Para isso devemos aprender a utilizar https e estudar criptografia e mais uma porrada de coisa no futuro. Mas uma solução rapida mas não 100% eficaz é utilizar um metodo chamado POST. Como padrão o método já vem como GET que é esse de aparecer os dados na url, com o POST nós vamos esconder ele mais um pouco, os dados não vão aparecer na url mas se você abrir o devtools, ir em network você consegue ver os dados digitados, então tome bastante cuidado.
 
