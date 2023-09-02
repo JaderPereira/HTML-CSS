@@ -4,10 +4,10 @@
  estou aprendendo a criar sites e agora a gerenciar repositórios!
 
  Minha timeline:
- Curso basico de JS
- curso de HTML5 e CSS3
+ basico de JS (já fiz)
+ HTML5 e CSS3 (estou aqui, quase acabando)
  JS clientside
- Node JS
  Git
+ Node JS
  PHP
  SQL 

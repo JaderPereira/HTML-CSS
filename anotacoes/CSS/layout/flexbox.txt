@@ -1,0 +1,5 @@
+definição de layout
+    caso não esteja familiarizado com a palavra, layout quer dizer a organização dos elementos na tela(isso no contexto do HTML e CSS). eu conheço 3 tipos de forma para fazer layout's, o jeito padrão que é com position, float e etc, com a tecnologia do display flex e com a tecnologia do display grid. Vou anotar todas é claro.
+
+definição flexbox
+    flexbox (ou flex) é uma tecnologia das CSS que axilia na criação de um layout. eu particularmente acho de extrema importancia essa tecnologia que é tratada como um display e acho ela revolucionaria. Caso queira aplicar flexbox no seu elemento nunca coloque nele diretamente, coloque primeiro no seu elemento pai que o display flexbox será aplicado em seus filhos que é o que você deseja.

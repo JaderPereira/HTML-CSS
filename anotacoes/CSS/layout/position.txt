@@ -1,0 +1,21 @@
+definição
+    caso não esteja familiarizado com a palavra, layout quer dizer a organização dos elementos na tela(isso no contexto do HTML e CSS). eu conheço 3 tipos de forma para fazer layout's, o jeito padrão que é com position, float e etc, com a tecnologia do display flex e com a tecnologia do display grid. Vou anotar todas é claro.
+
+position static
+    o posicionamento estático é o position padrão de toda tag html, assim como vemos que quando criamos algum titulo temos uma margem em volta dele, isso é uma configuração padrão e o position static está em todas as tag's HTML. 
+
+position relative
+    quando atribuimos a propriedade position: relative; a uma elemento HTML nós desbloqueamos 4 propriedades novas, são elas: top, bottom, left e right (em português: cima, baixo, esquerda e direita). Essas propriedades como o nome ja pode indicar vão mover o elemento de acordo com a medida colocada.
+
+position absolute
+    o posicionamento absoluto é bem delicado, quando você adiciona a propriedade position: absolute; no seu css o elemento que está sendo modificado vai fica em um determinado local independente do que aconteça, e alem disso ele vai ignorar os outros elementos que interagem com ele, por exemplo: se eu tenho 2 paragrafos com o posicionamento static(padrão), eles vão ficar um embaixo do outro com uma pequena margem entre si. Já se eu coloco posicionamento absoluto, no primeiro parágrafo, o segundo vai ficar dentro do primeiro. Isso acontece porque os elementos que tem o posicionamento absoluto ignoram os demais elementos, não que isso seja um problema enorme e que é uma má prática, com alguns ajustes no codigo você consegue deixar a tag que quiser do jeito que você quiser. por isso ele vai ter um posicionamento absoluto.
+
+position fixed
+    o posicionamento fixado pode se parecer com o absoluto mas eu acho mais interessante. Quando adicionamos postion: fixed; a um elemento nós estamos mandando aquele elemento ficar fixado aonde ele esta, assim como o position relative você tambem pode usar as propriedades: top, bottom, left e right. Esse position relative pode ser associado a um cabeçalho de algum site que quando você rola pra baixo ele te acompanha. Position fixed é bem interessante e ele também ignora os outros elementos ao seu redor como o posicionamento absoluto.
+
+z-index
+    z-index é uma propriedade que pode acabar com aquela sua gambiarra ou dor de cabeça que você estava no seu condigo, as vezes nós deparamos com situações indesejadas aonde algum elemento esta sobreposto de outro elemento e isso não era pra acontecer, caso isso aconteça coloque z-index nas duas coloque valores numéricos, um maior no elemento que quer sobrepor e um menor no outro elemento que vai ser sobreposto.
+
+float (right e left)
+    Elementos flutuantes são bastante úteis para a organização do seu layout, mas cuidado, você deve usar ele de maneira correta. Quando colocamos a propriedade float: (left ou right); teremos o elemento que está sendo modificado flutuando sobre os outros elementos, caso o float seja left o elemento vai voar para esquerda, caso o float seja right o elemento vai voar para direita. Quando um elemento esta sobre a propriedade float ele vai ignorar os outros elementos porque ele esta flutuando, ele saiu do fluxo normal e agora esta flutuando. Elementos com float são interessantes com a propreidade position: fixed; para alguma barra que seja util acompanhar o usuario na rolagem do seu site.
+

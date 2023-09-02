@@ -1,0 +1,2 @@
+definição de layout
+    caso não esteja familiarizado com a palavra, layout quer dizer a organização dos elementos na tela(isso no contexto do HTML e CSS). eu conheço 3 tipos de forma para fazer layout's, o jeito padrão que é com position, float e etc, com a tecnologia do display flex e com a tecnologia do display grid. Vou anotar todas é claro.
