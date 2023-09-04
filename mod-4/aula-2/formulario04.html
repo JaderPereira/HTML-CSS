@@ -11,19 +11,23 @@
         <fieldset>
             <legend>cadastro</legend>
             <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" autocomplete="name" maxlength="30" minlength="5" required>
+            </p>
+            <p>
                 <label for="iemail">e-mail: </label>
                 <input type="email" name="email" id="iemail" autocomplete="email" minlength="5" maxlength="40">
             </p>
             <p>
                 <label for="itel">telefone: </label>
-                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4, 5}-\d{4}$">
+                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4, 5}-\d{4}$" required>
+                <!---->                                           <!--estuda expressão regular que tu vai entender isso-->
             </p>
             <p>
                 <input type="submit" value="enviar">
                 <input type="reset" value="limpar">
             </p>
         </fieldset>
-        <!--estuda expressão regular que tu vai entender isso-->
     </form>
 </body>
 </html>
