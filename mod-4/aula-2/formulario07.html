@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>
+    <form action="cadastro.js" method="post">
+        <p>
+            <label for="iestado">Estado</label>
+            <select name="Estado" id="iestado">
+
+                <option value="" selected>- - - Escolha - - -</option>
+                <optgroup label="Região sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="região nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <label for="iprofissao">profissão: </label>
+            <input type="text" name="profissao" id="iprofissao" list="lista-profissao">
+            <datalist id="lista-profissao">
+                <option value="ADM">Adiministrador</option>
+                <option value="CONT">Contabilista</option>
+                <option value="DEV">Desenvolvedor</option>
+            </datalist>
+            <!--o input de profissão esta linkado com as opções dentro das opções dentro do datalist.-->
+        </p>
+
+        <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="limpar">
+        </p>
+    </form>
+</body>
+</html>
