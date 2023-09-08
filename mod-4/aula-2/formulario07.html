@@ -13,7 +13,7 @@
 
                 <option value="" selected>- - - Escolha - - -</option>
                 <optgroup label="Região sudeste">
-                    <option value="MG">Minas Gerais</option>
+                    <option>Minas Gerais</option>
                     <option value="RJ">Rio de Janeiro</option>
                     <option value="SP">São Paulo</option>
                 </optgroup>
@@ -25,7 +25,6 @@
                 </optgroup>
             </select>
         </p>
-
         <p>
             <label for="iprofissao">profissão: </label>
             <input type="text" name="profissao" id="iprofissao" list="lista-profissao">
@@ -34,9 +33,12 @@
                 <option value="CONT">Contabilista</option>
                 <option value="DEV">Desenvolvedor</option>
             </datalist>
-            <!--o input de profissão esta linkado com as opções dentro das opções dentro do datalist.-->
+            <!--o input de profissão esta linkado com as opções dentro da datalist pelo id.-->
         </p>
-
+        <p>
+            <label for="idmensagem"> mensagem: </label> <br>
+            <textarea name="mensagem" id="idmensagem" cols="30" rows="10" placeholder="Escreva sua mensagem..."></textarea>
+        </p>
         <p>
             <input type="submit" value="enviar">
             <input type="reset" value="limpar">
