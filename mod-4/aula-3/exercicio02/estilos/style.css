@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+/*  estilos gerais  */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+h1 {
+    color: white;
+    text-shadow: 0 0 5px red;
+    padding: 10px;
+}

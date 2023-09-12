@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/*  aparelho deitado(landscape)  */
+
+body {
+    background-image: url(../imagens/adesivo\ pro\ fichario3.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+}
