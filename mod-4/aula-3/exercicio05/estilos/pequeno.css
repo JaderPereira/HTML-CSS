@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+#amostra {
+    display: none;
+}
+#oculto {
+    display: block;
+}
+#oculto div {
+    display: block;
+}

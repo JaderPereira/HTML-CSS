@@ -12,17 +12,68 @@ grandes telas: acima de 1200px
 */
 
 @media print {                                                    /*impressão*/
-    
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    img {
+        display: block;
+        margin: auto;
+    }
+    #celular    { display: none; }
+    #tablet     { display: none; }
+    #impressora { display: block; }
+    #pc         { display: none; }
+    #tv         { display: none; }
+    main {
+        border: 2px solid black;
+    }
+    main::after {
+        content:"Impressão atraves de um site desenvolvido por Jader Pereira.";
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {     /*tablet*/
-
+    body {
+        background-image: url("../../imagens/back-tablet.jpg");
+    }
+    img {
+        display: block;
+        margin: auto;
+    }
+    #celular    { display: none; }
+    #tablet     { display: block; }
+    #impressora { display: none; }
+    #pc         { display: none; }
+    #tv         { display: none; }
+    
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {    /*desktop*/
-
+    body {
+        background-image: url("../../imagens/back-pc.jpg");
+    }
+    img {
+        display: block;
+        margin: auto;
+    }
+    #celular    { display: none; }
+    #tablet     { display: none; }
+    #impressora { display: none; }
+    #pc         { display: block; }
+    #tv         { display: none; }
 }
 
 @media screen and (min-width: 1200px) {                           /*telas grandes*/
-
+    body {
+        background-image: url("../../imagens/back-tv.jpg");
+    }
+    img {
+        display: block;
+        margin: auto;
+    }
+    #celular    { display: none; }
+    #tablet     { display: none; }
+    #impressora { display: none; }
+    #pc         { display: none; }
+    #tv         { display: block; }
 }
