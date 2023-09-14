@@ -4,23 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media query</title>
-    <link rel="stylesheet" href="estilos/pequeno.css" media="screen and (max-width: 652px)">
-    <link rel="stylesheet" href="estilos/normal.css">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu site</h1>
+        <i class="material-icons" id="burguer" onclick="clickMenu()">menu</i>
         <nav id="amostra">
-            <div class="home">Home</div>
-            <div>SAC</div>
-            <div>Apoiar</div>
-            <div>Mais</div>
-        </nav>
-        <nav id="oculto">
-            <div class="home">Home</div>
-            <div>SAC</div>
-            <div>Apoiar</div>
-            <div>Mais</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">SAC</a></li>
+                <li><a href="#">Apoiar</a></li>
+                <li><a href="#">Mais</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -33,5 +31,22 @@
     <footer>
         <p>Site desenvolvido por Jader Pereira</p>
     </footer>
+    <script>
+        function clickMenu () {
+            if (amostra.style.display == 'block') {
+                amostra.style.display = 'none'
+            } else{
+                amostra.style.display = 'block'
+            }
+        }
+        function mudouTamanho () {
+            if (window.innerWidth >= 768) {
+                amostra.style.display = 'block'
+            }
+            else {
+                amostra.style.display = 'none'
+            }
+        }
+    </script>
 </body>
 </html>
