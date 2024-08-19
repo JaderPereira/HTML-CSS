@@ -57,6 +57,9 @@ section {
 .imagem {
     background-color: lightgray;
     box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.429);
+    /*
+    background-attachment: fixed faz com que a imagem dê aquela impressão de estar parada em um segundo plano
+    */
     background-attachment: fixed;
 }
 .imagem > p {
