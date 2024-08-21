@@ -1,0 +1,79 @@
+flexbox é uma maneira que temos no css de aprimorar nosso layout, deixando ele mais flexivel, como o nome já diz. Aplicamos o flexbox em um elemento pai que queremos que os filhos tenham essa flexibilidade, o display flex n afeta o elemento pai e sim seus filhos, como está no código html que temos uma div com class 'flexConteiner' que está sendo aplicado o display flex para afetar seus filhos.
+
+Quando eu aplico o display flex eu abro um leque de possibilidades para poder trabalhar, por exemplo o flex-direction que faz com que o meu eixo principal seja alterado, o conceito de eixo principal e secundário é bem simples.
+
+eixo principal: onde, por padrão, os elementos vão começar. Quando eu falo que um elemento pai vai ter um display flex e todos os filhos vão ser alterados ele ja vem com algumas configurações padrões que a gente já vai ver, uma dessas alterações é definir o eixo principal como linha, ou seja, se eu falo pro meu css colocar elementos no começo do meu eixo ele vai colocar elementos da esquerda pra direita. Podemos alterar o eixo com flex-direction.
+
+eixo secundário: é definidio quando definimos o eixo principal, se o eixo principal é coluna, ou eixo secundário é linha e vice versa.
+
+Só com isso já tenho uma porrada de coisa pra trabalhar, alem disso temos umas propriedades que nos ajudam a posicionar elementos como justify-content e o align-items que trabalham com base no flex-direction, o justify-content muda o eixo principal e o align-items muda o eixo secundário.
+
+flex-direction
+    diz qual vai ser o eixo principal
+    valores:
+        flex-direction: column;         faz com que o eixo principal dos elementos sejam em uma coluna de cima pra baixo
+        flex-direction: row;            faz com que o eixo principal dos elementos sejam em linha da esquerda pra direita
+        flex-direction: column-reverse; faz com que o eixo principal dos elementos sejam em uma coluna reversa de baixo pra cima
+        flex-direction: row-reverse;    faz com que o eixo principal dos elementos sejam em uma linha reversa da direita pra esquerda
+
+justify-content
+    valores basicos:
+        justify-content: flex-start;     bota os elementos no inicio do eixo principal(valor padrão)
+        justify-content: flex-end;       bota os elementos no final do eixo principal
+        justify-content: center;         bota os elementos no meio do eixo principal   
+    valores mais complexos:
+        justify-content: space-between;   coloca o primeiro e ultimo elemento colado na extremidade do pai e divide o espaço igualmente entre os elementos
+        justify-content: space-around;    cada item tem um espaço entre eles, o primeiro e o ultimo elemento vão ter metade desse espaço de distancia das extremidades
+        justify-content: space-evenly;    parecido com o space-between mas ao inves de colocar o primeiro e ultimo elemento colados na extremidade ele dá um espaço e divide entre todos os elementos(testa ai)
+    
+align-items
+    align-items: flex-start       bota os elementos no inicio do eixo secundário
+    align-items: flex-end         bota os elementos no fim do eixo secundário
+    align-items: center           alinha os elementos no centro do eixo secundário
+    align-items: sctrech          estica os itens para que eles o comprimento completo do eixo secundário(valor padrão)
+    align-items: baseline         digamos que temos um elemento com fonte maior que os demais e ta mt feio pq ta desalinhado pelo tamanho, o baseline vai alinha os elementos pequenos para que fique visualmente bonitos ao lado do elemento grande
+
+align-self
+    align-self é usado para alinhar 1 unico elementos, digamos que você fez um flexbox bonitinho pra 5 elementos e quer mudar o alinhamento de apenas 1 elemento, você pega o seletor daquele elemento e adiciona a propriedade align self nele. align self serve como num align-items pra 1 elemento só.
+    valores: mesmos do align-itens 
+
+flex-wrap
+    flex-wrap vai manipular a quebra de elementos para que o conteudo seja responsivo, exemplo, digamos que temos um aplicativo que dentro dele tem uns 100 quadrados que ocupam metade da tela, a maneira correta de tratar isso é quebrando 50 linhas para que não genha rolagem lateral e sim uma rolagem vertical, flex-wrap vai ajudar a gente nesse quesito.
+    valores:
+        flex-wrap: nowarp;        valor padrão, cria uma rolagem lateral caso os elementos não caibam no seu pai
+        flex-wrap: wrap;          ajusta os elementos para que não haja rolagem lateral como deve ser
+        flex-wrap: wrap-reverse;  faz mesma coisa que o wrap só que ao contrario
+
+flex-flow (flex-direction e flex-wrap)
+    shorthand que combina o flex-direction e o flex-wrap, nessa ordem. exemplo:
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    =
+    
+    flex-flow: row wrap;
+
+flex-grow 
+    Image que temos um elemento pai com 5 elementos filhos dentro, eu configuro pra que esse elemento pai tenha um justify-content: space-around; todos os elementos tem o mesmo tamanho e vão se adaptando com o espaço que tem, se eu pego o primeiro elemento e falo que ele tem flex-grow: 2; isso quer dizer que esse elemento vai se adaptar para 2 vezes o tamanho dos demais que vem com o valor padrão de 1. ele não ultrapassa nenhum limite do tamanho do seu elemento pai, se eu for diminuindo o elemento pai ele tambem vai diminuindo, ele só vai ficar 2 ou quantas vezes voce quiser maior que os demais elementos se sobrar espaço pra ele, eu posso botar um flex-grow de 6 mas ele pode nem chegar no dobro do elemento por falta de espaço, mas CASO tenha esse espaço ai sim ele vai ser usado lá.
+    valores: seus valores são numéricos, se tu ler a explicação tu vai entender(valor padrão: 1)
+
+flex-shrink
+    É o flex-grow ao contrario, se eu coloco um flex-shrink: 2; em um elemento especifico quer dizer que esse elemento será 2 vezes menor que os demais.
+    valor: seus valores são numéricos, se tu ler a explicação tu vai entender(valor padrão: 1)
+
+flex-basis
+    flex-basis vai dar uma largura mais exata para cada elemento, quando eu tenho um elemento pai com por exemplo 5 elementos e falo que o flex-basis deles é de 50px quer dizer que cada elemento tem 50 pixels? sim, só que temos uns pingos pra por nos i's, os elementos vão ter a larguta de um flex-basis apenas se o grow e shrink forem 0, pois ai eles serão imutaveis, agora se temos qualquer valor diferente de 0 em grow podemos ver que o elemento aumenta conforme a largura do elemento pai aumenta. O mesmo vale para o shrink, se temos qualquer valor diferente de 0 em shrink e diminuimos a largura do elemento pai vemos que o elemento vai se encolher. mas, por exemplo, caso colocamos um grow de 0 e o shrink como 1, e um flex-basis de 40px em uma tela larga que tenha bastante espaço, podemos ver que o elemento não cresce alem de 40 pixels mas pode encolher tranquilamente, flex-basis é interessante para por um limite nas coisas.
+    valor: medida comum, px, %, em.
+
+flex
+    flex é um short hand que engloba as seguintes propriedades: flex-grow, flex-shrink e flex-basis, nessa ordem. exemplo:
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 30px;
+
+    =
+
+    flex: 1 1 30px;
+
+order
+    digamos que temos um elemento pai com 4 elementos, cada elemento tem um número de 1 a 4, se for da minha vontade eu posso mudar a ordem dos elementos com o order, por base a ordem é a que ele lê o HTML, então se eu quero mudar meu primeiro elemento para que ele fique no terceiro ligar eu posso colocar order: 3 nele

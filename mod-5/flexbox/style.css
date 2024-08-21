@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flexConteiner{
+    height: 30vh;
+    width: 400px;
+    background-color: antiquewhite;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.flexItem{
+    background-color: blue;
+}
+.flexItem:nth-child(1){
+    order: 1;
+}
+.flexItem:nth-child(2){
+    order: 2;
+}
+.flexItem:nth-child(3){
+    order: 5;
+}
+.flexItem:nth-child(4){
+    order: 4;
+}
+.flexItem:nth-child(5){
+    order: 3;
+}
+
+
+
+.flexConteiner2 {
+    background-color: aquamarine;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.flexItem2 {
+    background-color: aqua;
+    margin: 10px;
+    flex-basis: 50px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex: 1 0 100px;
+}
+
+
+
+#maluco {
+    flex-grow: 0;
+}
+#pirado {
+    flex-shrink: 1;
+}
+
+
+
+/*
+Omg hi aula de flexbox
+
+flexbox é uma maneira que temos no css de aprimorar nosso layout, deixando ele mais flexivel, como o nome já diz. Aplicamos o flexbox em um elemento pai que queremos que os filhos tenham essa flexibilidade, o display flex n afeta o elemento pai e sim seus filhos, como está no código html que temos uma div com class 'flexConteiner' que está sendo aplicado o display flex para afetar seus filhos.
+
+Quando eu aplico o display flex eu abro um leque de possibilidades para poder trabalhar, por exemplo o flex-direction que faz com que o meu eixo principal seja alterado, o conceito de eixo principal e secundário é bem simples.
+
+eixo principal: onde, por padrão, os elementos vão começar. Quando eu falo que um elemento pai vai ter um display flex e todos os filhos vão ser alterados ele ja vem com algumas configurações padrões que a gente já vai ver, uma dessas alterações é definir o eixo principal como linha, ou seja, se eu falo pro meu css colocar elementos no começo do meu eixo ele vai colocar elementos da esquerda pra direita. Podemos alterar o eixo com flex-direction.
+
+eixo secundário: é definidio quando definimos o eixo principal, se o eixo principal é coluna, ou eixo secundário é linha e vice versa.
+
+flex-direction: column;         faz com que o eixo principal dos elementos sejam em uma coluna de cima pra baixo
+flex-direction: row;            faz com que o eixo principal dos elementos sejam em linha da esquerda pra direita
+flex-direction: column-reverse; faz com que o eixo principal dos elementos sejam em uma coluna reversa de baixo pra cima
+flex-direction: row-reverse;    faz com que o eixo principal dos elementos sejam em uma linha reversa da direita pra esquerda
+
+Só com isso já tenho uma porrada de coisa pra trabalhar, alem disso temos umas propriedades que nos ajudam a posicionar elementos como justify-content e o align-items que trabalham com base no flex-direction, o justify-content muda o eixo principal e o align-items muda o eixo secundário.
+
+justify-content
+valores basicos:
+        justify-content: flex-start;     bota os elementos no inicio do eixo principal(valor padrão)
+        justify-content: flex-end;       bota os elementos no final do eixo principal
+        justify-content: center;         bota os elementos no meio do eixo principal   
+    valores mais complexos:
+        justify-content: space-between;   coloca o primeiro e ultimo elemento colado na extremidade do pai e divide o espaço igualmente entre os elementos
+        justify-content: space-around;    cada item tem um espaço entre eles, o primeiro e o ultimo elemento vão ter metade desse espaço de distancia das extremidades
+        justify-content: space-evenly;    parecido com o space-between mas ao inves de colocar o primeiro e ultimo elemento colados na extremidade ele dá um espaço e divide entre todos os elementos(testa ai)
+    
+align-items
+    align-items: flex-start       bota os elementos no inicio do eixo secundário
+    align-items: flex-end         bota os elementos no fim do eixo secundário
+    align-items: center           alinha os elementos no centro do eixo secundário
+    align-items: sctrech          estica os itens para que eles o comprimento completo do eixo secundário(valor padrão)
+    align-items: baseline         digamos que temos um elemento com fonte maior que os demais e ta mt feio pq ta desalinhado pelo tamanho, o baseline vai alinha os elementos pequenos para que fique visualmente bonitos ao lado do elemento grande
+
+
+
+*/
