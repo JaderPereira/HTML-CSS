@@ -5,9 +5,8 @@
 
  Minha timeline:
  basico de JS (já fiz)
- HTML5 e CSS3 (estou aqui, quase acabando)
- JS clientside
- Git
- Node JS
- PHP
+ HTML5 e CSS3
+ JS 
+ Node JS (estou aqui)
  SQL 
+ Git
